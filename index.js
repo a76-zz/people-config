@@ -1,5 +1,6 @@
 const port = 3010;
 const host = 'people-cloud.localtest.me';
+const uri = 'http://' + host + ':' + port;
 
 const messages = {
   sync: 'SYNC',
@@ -9,8 +10,8 @@ const messages = {
 };
 
 module.exports = {
-  port,
-  host,
-  messages,
-  uri: `http://${host}:${port}`
+  port: port,
+  host: host,
+  messages: messages,
+  uri: uri
 };
