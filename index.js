@@ -1,19 +1,16 @@
-const port = 3010
-const host = 'people-cloud.localtest.me'
+const port = 3010;
+const host = 'people-cloud.localtest.me';
 
-const messageTypes = [
-  'SYNC',
-  'ADD_CONTACT',
-  'EDIT_CONTACT',
-  'DELETE_CONTACT'
-].reduce((accum, msg) => {
-  accum[ msg ] = msg
-  return accum
-}, {})
+const messages = {
+  sync: 'SYNC',
+  addContact: 'ADD_CONTACT',
+  editContact: 'EDIT_CONTACT',
+  deleteContact: 'DELETE_CONTACT'
+};
 
 module.exports = {
   port,
   host,
-  messageTypes,
+  messages,
   uri: `http://${host}:${port}`
-}
+};
